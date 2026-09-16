@@ -1,2 +1,0 @@
-# Puzzle3
-Yellow

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE YELLOW KING</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #080808;
+    color: #d6b84c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 520px;
+    text-align: center;
+}
+
+h1 {
+    letter-spacing: 8px;
+    font-size: 25px;
+    font-weight: normal;
+    color: #d6b84c;
+    text-shadow: 0 0 8px rgba(214, 184, 76, 0.25);
+}
+
+.line {
+    height: 1px;
+    background: #5c4c20;
+    margin: 20px 0;
+}
+
+.black-box {
+    margin-top: 30px;
+    padding: 30px;
+    background: #030303;
+    border: 1px solid #5c4c20;
+    box-shadow: 0 0 20px rgba(214, 184, 76, 0.08);
+}
+
+.clue {
+    color: #d6b84c;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.paragraph {
+    color: #aaa;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 28px;
+    font-style: italic;
+}
+
+input {
+    width: 90%;
+    padding: 14px;
+    box-sizing: border-box;
+    background: #0d0d0d;
+    border: 1px solid #5c4c20;
+    color: #d6b84c;
+    text-align: center;
+    font-family: monospace;
+    outline: none;
+}
+
+input:focus {
+    border-color: #d6b84c;
+}
+
+button {
+    margin-top: 15px;
+    padding: 11px 30px;
+    background: #0d0d0d;
+    border: 1px solid #5c4c20;
+    color: #aaa;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    color: #d6b84c;
+    border-color: #d6b84c;
+}
+
+#message {
+    margin-top: 20px;
+    font-family: monospace;
+    color: #d6b84c;
+    min-height: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>THE YELLOW KING</h1>
+
+    <div class="line"></div>
+
+    <div class="black-box">
+
+        <div class="clue">
+            Read page 13. Find the place beneath the black stars,
+            where twin suns disappear.
+        </div>
+
+        <div class="paragraph">
+            I cannot forget Carcosa where black stars hang in the
+            heavens; where the shadows of men’s thoughts lengthen
+            in the afternoon, when the twin suns sink into the
+            Lake of Hali…
+        </div>
+
+        <input id="answer" placeholder="Enter answer">
+
+        <br>
+
+        <button onclick="showMessage()">ENTER</button>
+
+        <div id="message"></div>
+
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+
+    const input = document
+        .getElementById("answer")
+        .value
+        .trim()
+        .toLowerCase();
+
+    // Correct answer = CARCOSA
+    if (input === "carcosa") {
+
+        // Placeholder for the next puzzle/link
+        document.getElementById("message").textContent = "None";
+
+    } else {
+
+        document.getElementById("message").textContent = "";
+
+    }
+}
+</script>
+
+</body>
+</html>
